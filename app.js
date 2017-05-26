@@ -34,7 +34,7 @@ if (thirdAnswer.toUpperCase() === 'Y') {
 } else {
   correctAnswer = correctAnswer - 1;
   console.log('Wrong answer! Do you even know him at all?');
-}
+} 
 
 var fourthAnswer = prompt('Does Larry have a cat?');
 
