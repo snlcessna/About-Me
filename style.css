@@ -1,5 +1,6 @@
 h1{
   background-color: green;
+  text-align: center;
 }
 
 p{
@@ -12,4 +13,5 @@ p{
 
 #unique-p-tag{
   background-color: blue;
+  color: white;
 }
