@@ -48,6 +48,7 @@ if (fourthAnswer.toUpperCase() === 'Y') {
 var fifthAnswer = prompt('Was Larry in the Army?');
 
 if (fifthAnswer.toUpperCase() === 'Y') {
+  correctAnswer = correctAnswer - 1;
   console.log('Nope!');
 } else {
   console.log('Go Navy! Beat Army!');
