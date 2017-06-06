@@ -55,17 +55,62 @@ if (fifthAnswer.toUpperCase() === 'Y') {
   correctAnswer++;
   console.log('Go Navy! Beat Army!');
 }
-/*
-var sixthAnswer = prompt('Can you guess my favorite number?');
 
-if (sixthAnswer != '7') {
-  console.log('Try again');
-} else {
-  correctAnswer++;
-  console.log('You got it!');
+var guesses = 4;
+var guessing = true;
+
+while (guessing && guesses > 0) {
+  var sixthAnswer = prompt('Can you guess my favorite number?');
+  if (sixthAnswer < '7') {
+    guesses--;
+    alert('Too low! ' + guesses + ' guesses left.');
+    console.log('Try again');
+    console.log(guesses);
+  }
+
+  if (sixthAnswer > '7') {
+    guesses--;
+    alert('Too high! ' + guesses + ' guesses left.');
+    console.log('Try again');
+    console.log(guesses);
+  }else {
+    correctAnswer++;
+    console.log('You got it!');
+    guessing = false;
+    console.log(guesses);
+  }
 }
-*/
-document.write('Larry is Married, he has children, he plays the guitar, he has a dog, and Retired from the Navy in 2015.');
+
+var guesses = 6;
+var i = 0;
+var states = ['Illinois', 'Indiana', 'Florida', 'Washington'];
+var seventhAnswer = prompt('Can you guess one of the states Larry has lived in?');
+while (guesses !== 0) {
+  for (i = 0; i < states.length; i++) {
+    if (seventhAnswer === states[i]) {
+      alert('Wow you guess right! holy poop.');
+      guesses = 0;
+    }else {
+      alert('You guessed wrong! You have ' + guesses + ' left.');
+    }
+  }
+}
+
+var guesses = 6;
+var i = 0;
+var states = ['illinois', 'indiana', 'florida', 'washington', 'Illinois', 'Indiana', 'Florida', 'Washington'];
+while (guesses > 0) {
+  var seventhAnswer = prompt('Can you guess one of the states Larry has lived in?');
+  if (states.indexOf(seventhAnswer) === -1) {
+    guesses--;
+    alert('You guessed wrong! You have ' + guesses + ' left.');
+  }else {
+    alert('Wow you\'re so smart.');
+    guesses = 0;
+  }
+}
+
+//document.write('Larry is Married, he has children, he plays the guitar, he has a dog, and Retired from the Navy in 2015.');
 /*
 if (correctAnswer === "7") {
   alert('Wow! You got all of the answers correct!')
